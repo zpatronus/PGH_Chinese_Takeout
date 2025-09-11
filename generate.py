@@ -40,7 +40,7 @@ def generate_readme():
                 filename = os.path.splitext(os.path.basename(img_path))[0]
 
                 content += f"### {filename}\n\n"
-                content += f"![{filename}]({img_path})\n\n"
+                content += f'<img src="{img_path}" alt="{filename}" width="100px" />\n\n'
 
     with open("README.md", "w", encoding="utf-8") as f:
         f.write(content)
